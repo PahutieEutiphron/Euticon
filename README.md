@@ -1,8 +1,8 @@
-#Euticon.sh
+# Euticon.sh
 
 A fast and modular subdomain recon and content discovery script. Originally built for personal use in real-world penetration tests, but may also be helpful to others performing similar assessments. Inspired by the recon script from the TCM Security Practical Ethical Hacking (PEH) course.
 
-#What It Does:
+# What It Does:
 
 Cleans input domains
 
@@ -21,7 +21,7 @@ Scans for:
 - Subdomain takeover candidates (with subzy)
 - Optionally scrapes Wayback URLs (unless --no-wayback is passed)
 
-#Dependencies:
+# Dependencies:
 
   Make sure these are installed and in your $PATH:
 
@@ -33,14 +33,14 @@ Scans for:
   - gau and waybackurls (https://github.com/lc/gau, https://github.com/tomnomnom/waybackurls)
   - Standard Unix tools: bash, grep, find, cat, sort, etc.
 
-#Usage:
+# Usage:
 
   You must provide a file named domains.txt in the root directory containing wildcard domains (e.g., example.com, *.test.com), one per line. By default, the script reads from this file.
   Alternatively, you can specify a custom domain file using the -f flag:
 ```
   ./Euticon.sh -f custom_domains.txt [--no-wayback] [--use-httpx] [--fast]
 ```
-#Flags:
+# Flags:
 ```
 -f, --file
 ```
@@ -70,7 +70,7 @@ Use httpx instead of httprobe for alive checking
 ```
 Show usage instructions and available options
 
-#Output Structure:
+# Output Structure:
 
 Results are organized under the output/ folder:
 ```
@@ -84,20 +84,20 @@ output/
 ├── takeovers/              # Subdomain takeover scan results
 └── wayback/ (optional)     # gau + wayback scraping
 ```
-#Example Usage:
+# Example Usage:
 ```
 echo "*.example.com" > domains.txt
 ./Euticon.sh --use-httpx --fast
 ```
-#Pro Tip:
+# Pro Tip:
 
   Customize keyword grep logic to your recon style.
 
-#License
+# License
 
   MIT License — free to use, modify, and share.
 
-#About
+# About
 
   Maintained by Tudor - https://www.linkedin.com/in/tudor-lasuschevici/ | Pentester | Inspired by the recon script from the TCM Security Practical Ethical Hacking (PEH) course.
   # Euticon
